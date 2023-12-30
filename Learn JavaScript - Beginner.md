@@ -1,4 +1,4 @@
-`Written by James Plummer with Obsidian.md + backed up to GitHub via Git plug-in.`
+/`Written by James Plummer with Obsidian.md + backed up to GitHub via Git plug-in.`
 
 ## Table of contents
 
