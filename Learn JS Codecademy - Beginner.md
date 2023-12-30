@@ -103,7 +103,7 @@ Please note: All values are rounded down to the nearest whole number.`);
 ### Project 2 - Dog Years
 
 ```JS
-// variable set to my age
+/* variable set to my age
 let myAge = 22;
 // variable for early dog years. first 2 years dog = 2 * 10.5 human years
 let earlyYears = 2 * 10.5;
@@ -111,10 +111,9 @@ let earlyYears = 2 * 10.5;
 let laterYears = myAge - 2;
 // times 4 to account for later years
 laterYears *= 4;
-/* Can also be done like so:
-let laterYears = (myAge - 2) * 4;
 */
-
+// Improved version:
+let laterYears = (myAge - 2) * 4;
 // addition of above calculations show my age in dog years
 let myAgeDogYears = laterYears + earlyYears;
 // built in method to make my name uppercase
