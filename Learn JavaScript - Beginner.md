@@ -10,6 +10,9 @@ Data types, basic arithmetic operators, variables and basic projects.
 ### 2. Conditionals
 
 If, if...else, else statements, comparison operators, logical operators, truthy and falsy, ternary operators and more basic projects.
+## 3. Functions
+
+
 
 ---
 ---
