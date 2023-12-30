@@ -1,13 +1,7 @@
+`James Plummer`
+## 0. Preface
 
-hello this is an example testing more testing
-
-```JS
-
-let variable = 'cheese';
-
-console.log('Hello');
-```
-
+From the beginning, I am aware it is very noob-y but I want to document information down to the finest details. Later I can summarize and eventually I will not need this document other than for reference. For now, enjoy infant level information :)
 ## 1. Introduction
 
 7 Fundamental data types in JS:
