@@ -188,7 +188,7 @@ if (hungerLevel => 7){
 }
 ```
 
-
+---
 ### Logical Operators
 
 | Operator | Syntax | Notes |
@@ -233,6 +233,7 @@ let test = true;
 console.log(!test);
 ```
 
+---
 ### Truthy and Falsy
 
 This is how we can check if a variable has been assigned a value.
@@ -254,4 +255,73 @@ The same also applies to other data types, not just numbers. Here is a list of f
 | no value at all | `null` |
 | declared variable lacks a value | `undefined` |
 | Not a Number | `NaN` |
+
+---
+### Ternary Operator
+
+(Note: Only compatible with ES6, I believe - need to verify.)
+
+Ternary operators are used to simplify if...else statements. Example below:
+
+Normal if statement:
+```JS
+let verify = true;
+
+if (verify) {
+	console.log('It is true');
+} else {
+	console.log ('It is false');
+}
+```
+
+Ternary operator for the same example:
+```JS
+verify ? console.log('It is true') : console.log('It is false');
+```
+
+In the example above, the condition `verify` is provided before the `?`. Following the question mark there is a `true` expression + `:` + `false` expression.
+
+If the condition evaluates to `true`, the first expression executes. If the condition evaluates to `false`, the second expression executes.
+
+As you can see, ternary operators are significantly more efficient and offer shorter-handed syntax. Although, they can only be used if the needed expression is either `true` or `false`.
+
+---
+### Switch Statements
+
+A switch statement is another way in which we can shorten our code. It is also easier to read and write for us. Let's look at an example below:
+
+Normal if else statement:
+```JS
+let food = 'papaya';  
+  
+if (food === 'banana') {  
+  console.log('Bananas are $0.49');  
+} else if (groceryItem === 'papaya'){  
+  console.log('Papayas are $1.29');  
+} else {  
+  console.log('Invalid item');  
+}
+```
+
+Switch statement for the same example:
+```JS
+let groceryItem = 'papaya';  
+  
+switch (groceryItem) {  
+  case 'banana':  
+    console.log('Bananas are $0.49');  
+    break;  
+  case 'lemon':  
+    console.log('Lemons are $1.49');  
+    break;  
+  case 'papaya':  
+    console.log('Papayas are $1.29');  
+    break;  
+  default:  
+    console.log('Invalid item');  
+    break;  
+}
+```
+
+The output in both cases is the same: "Papayas are $1.29".
 
