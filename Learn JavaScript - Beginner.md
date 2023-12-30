@@ -417,3 +417,7 @@ if (runnerAge > 18 && earlyRunner){
 ```
 
 ---
+---
+### Functions
+
+When programming, we often need to complete a specific task or set of tasks multiple times.  A block of code can be group under a single function that can be called like so `function()`.
