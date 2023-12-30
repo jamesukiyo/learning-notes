@@ -8,7 +8,7 @@ let variable = 'cheese';
 console.log('Hello');
 ```
 
-## Introduction
+## 1. Introduction
 
 7 Fundamental data types in JS:
 - Strings
@@ -122,3 +122,8 @@ myName = "jAmEs".toUpperCase();
 // string interpolation to display sentence about name and ages
 console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeDogYears} years old in dog years.`);
 ```
+
+## 2. Conditionals
+
+Conditional statements check condition(s) and perform a task based on them.
+
