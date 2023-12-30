@@ -433,6 +433,7 @@ const area =  width * height;
 console.log(area);
 ```
 
+---
 ### Function Declarations
 
 There are 3 parts to a function declaration:
@@ -452,6 +453,7 @@ sayHello(); // call the function and it will output 'Hello World!'
 sayHello(); // we can do it as many times as we want
 ```
 
+---
 ### Parameters and Arguments
 
 So far, we've only looked at functions without an input. However, some functions can take inputs and use them to perform a task. For this, we need to specify the functions parameters. The parameters for a function are enclosed within the functions `()` when it is declared and separated by a `,`
@@ -466,12 +468,82 @@ userInfo(James, 22); // here we call the function but with arguments, see below
 userInfo(Bob, 38); // here we call it again but with different arguments
 // output 'Your name is Bob. You are 38 years old.'
 ```
+(Note, if the `+ name +` and `+ age +` is confusing, please revisit the variables section where string concatenation and template literals were discussed.)
 
 Once we have a function declared with parameters, we can then give arguments to the function when calling it so the function can use this data. In my example, we used the input (argument) of `James` for the `name` parameter and `22` as the input (argument) for `age`.
 
+---
 ### Default Parameters
 
 One new feature added in ES6 is the ability to use default parameters. This allows us to set a predetermined value for a parameter if an argument isn't given.
 
+Let's look at an example:
+```JS
+// below the function is declared and default parameters are given for item1, 2 and 3.
+function shoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+shoppingList();
+```
+This will output:
+`'Remember to buy milk'`
+`'Remember to buy bread'`
+`'Remember to buy eggs'`
 
+But we can still give it arguments and overwrite the defaults, like this:
+```JS
+function shoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+shoppingList('popcorn', 'fruit', 'cheese'); // Arguments will overwrite the defaults
+```
+This will be the new output:
+`'Remember to buy popcorn'`
+`'Remember to buy fruit'`
+`'Remember to buy cheese'`
+
+Imagine a case where you have a new user on your site. You don't know their name yet so you can't use it as an argument. Instead, you can have a default parameter like `stranger`.
+
+---
+### Return
+
+When a function is called, the computer will run through the function's code and evaluate a result. By default, the resulting value is `undefined`.
+
+Let's take a look at an example to understand how the keyword `return` works:
+```JS
+function rectangleArea(width, height) {  
+  let area = width * height;  
+}  
+console.log(rectangleArea(5, 10))
+```
+When the code above runs, the console log prints `undefined`. The code works and the computer calculates the area to be '50' but we didn't capture this information so it couldn't be passed back to the function.
+
+To do this we need a return statement, like this:
+```JS
+function rectangleArea(width, height) {  
+  let area = width * height;  
+  return area;
+}  
+console.log(rectangleArea(5, 10))
+```
+Now the information will be passed back to the function and our output to the console will be '50'.
+
+It's important to note that a `return` statement stops the execution of the function and any code that follows won't be executed. This can be powerful in cases like this:
+```JS
+rectangleArea(width, height) {  
+  if (width < 0 || height < 0) {  
+    return 'Positive numbers are needed to calculate area! Please try again.';  
+  }  
+  return width * height;  
+}
+```
+Here we check if the width and height entered are positive, if they are not we `return` an error message and do not output the area. If the numbers are positive, the if statement is false so it is skipped and we `return` the area (`width * height`).
+
+---
+
+### Helper Functions
 
