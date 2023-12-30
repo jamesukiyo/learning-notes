@@ -8,9 +8,9 @@ let fahrenheit = Math.floor(celcius * (9/5) + 32);
 let newton = Math.floor(celcius * (33/100));
 
 console.log(`The temperature is:
-${fahrenheit} degrees Fahrenheit.
-${celcius} degrees Celcius.
-${kelvin} degrees Kelvin.
-${newton} degrees ?Newton?.
+  ${fahrenheit} degrees Fahrenheit.
+  ${celcius} degrees Celcius.
+  ${kelvin} degrees Kelvin.
+  ${newton} degrees ?Newton?.
 
-Please note: All values are rounded down to the nearest whole number.`)
+  Please note: All values are rounded down to the nearest whole number.`);
