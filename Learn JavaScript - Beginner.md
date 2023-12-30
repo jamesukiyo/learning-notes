@@ -9,7 +9,7 @@
 Data types, basic arithmetic operators, variables and basic projects.
 ### 2. Conditionals
 
-If, if...else, else statements, comparison operators and logical operators.
+If, if...else, else statements, comparison operators, logical operators, truthy and falsy, ternary operators and more basic projects.
 
 ---
 ---
@@ -58,7 +58,7 @@ Built in objects such as `Math` are collections of methods and properties that J
 
 Remember case sensitivity. 
 ```JS
-variableName != VariableName.
+variableName != VariableName
 ```
 ---
 ### Variables
