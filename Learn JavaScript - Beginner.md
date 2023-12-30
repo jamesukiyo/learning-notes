@@ -3,9 +3,13 @@
 ## Table of contents
 
 ### 0. Preface
+
 ### 1. Introduction
 
+Data types, basic arithmetic operators, variables and basic projects.
 ### 2. Conditionals
+
+If, if...else, else statements, comparison operators and logical operators.
 
 ---
 ---
@@ -228,3 +232,26 @@ let test = true;
 // prints the opposite of test's boolean value - so false.
 console.log(!test);
 ```
+
+### Truthy and Falsy
+
+This is how we can check if a variable has been assigned a value.
+```JS
+const number = 1;
+console.log(number); // evaluates to true
+
+const number; // here you can see the variable is declared but isn't assigned a value
+console.log(number); // evaluates to false (undefined)
+// It would also be false if it was given the value 0 - see below.
+```
+
+The same also applies to other data types, not just numbers. Here is a list of falsy values:
+
+| Details | Example |
+| ---- | ---- |
+| Integer | `0` |
+| Empty string | `""` or `''` |
+| no value at all | `null` |
+| declared variable lacks a value | `undefined` |
+| Not a Number | `NaN` |
+
