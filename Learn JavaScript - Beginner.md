@@ -174,7 +174,7 @@ To compare values we can use different types of operators. Below is a list of so
 | Is equal to | === |
 | Is not equal to | !== |
 
-(Note: === also checks to the data types of the values are matching. == also works otherwise.)
+(Note: === checks that the data types of the values are matching. == also works otherwise.)
 
 Basic examples:
 ```JS
@@ -187,7 +187,7 @@ Practical example:
 ```JS
 let hungerLevel = 7;
 
-if (hungerLevel => 7){
+if (hungerLevel => 7){ // if hungerLevel is greater than or equal to 7 -> 'Time to eat!'
   console.log('Time to eat!');
 } else {
   console.log('We can eat later!');
