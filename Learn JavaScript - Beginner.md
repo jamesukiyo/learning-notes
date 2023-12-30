@@ -334,3 +334,86 @@ Now let's take a look at how each section of the switch statement works compared
 | `case`s | `case`s are what we use to check if a condition is met by the expression that follows. For example, 'papayas' match in our case so 'Papayas are $1.29' would log to the console. |
 | `break` | Once a `case` is `true` we need to exit the code block so it doesn't continue running after the condition was satisfied. We only include `break` after the condition has been met and the necessary action has been taken. E.g. we matched 'papaya' and logged to console THEN `break`. |
 | `default` | In cases, instead of `else`, we use `default`. This is a fallback in case no condition is met. It is essential to include a `default` case. |
+
+Take note of the syntax here. For example, the conditions in an if statement are enclosed in `()` but, in switch statements, each case is followed by `:` and there are no `()` for each individual condition (`case`).
+
+---
+
+### Project 3 - Magic Eight Ball
+
+```JS
+let userName = 'James';
+let userQuestion = 'Will it rain today?';
+let randomNumber = Math.floor((Math.random() * 8) + 1);
+let eightBall = '';
+
+// ternary operator to say hello with/without userName
+userName ? console.log(`Hello, ${userName}!`) :
+console.log('Hello!');
+
+// confirms question with string concatenation + with/without userName
+userName ? console.log(`Here is an answer to your question "${userQuestion}", ${userName}`) :
+console.log(`Here is an answer to your question "${userQuestion}"`);
+
+//switch statement to assign string to eightBall based on randomNumber
+switch (randomNumber) {
+  case 1:
+    eightBall = 'It is certain';
+    break;
+  case 2:
+    eightBall = 'It is highly likely';
+    break;
+  case 3:
+    eightBall = 'It is quite likely';
+    break;
+  case 4:
+    eightBall = 'It is slightly likely';
+    break;
+  case 5:
+    eightBall = 'It is slightly unlikely';
+    break;
+  case 6:
+    eightBall = 'It is quite unlikely';
+    break;
+  case 7:
+    eightBall = 'It is highly unlikely';
+    break;
+  case 8:
+    eightBall = 'It is impossible';
+    break;
+  default:
+    eightBall = 'Invalid';
+    break;
+}
+
+// final output from eightBall to answer question
+console.log(`${eightBall}`);
+```
+
+---
+### Project 4 - Race Day
+
+```JS
+let raceNumber = Math.floor(Math.random() * 1000);
+let earlyRunner = false;
+let runnerAge = 18;
+
+if (runnerAge > 18 && earlyRunner){
+  raceNumber += 1000;
+}
+
+if (runnerAge > 18 && earlyRunner){
+  console.log(`You will race at 9:30 AM. Your race number is: ${raceNumber}`);
+  
+} else if (runnerAge > 18 && !earlyRunner){
+  console.log(`You will race at 11:00 AM. Your race number is: ${raceNumber}`)
+
+} else if (runnerAge < 18){
+  console.log(`You will race at 12:30 PM. Your race number is: ${raceNumber}`)
+
+} else {
+  console.log('Please visit the registration desk.');
+}
+```
+
+---
