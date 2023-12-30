@@ -1,0 +1,2 @@
+# learningJS
+personal notes
