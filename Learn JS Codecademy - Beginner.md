@@ -1,4 +1,5 @@
-``Written with
+`Written by James Plummer with Obsidian.md + backed up to GitHub via Git plug-in.`
+
 ## 0. Preface
 
 From the beginning, I am aware it is very noob-y but I want to document information down to the finest details. Later I can summarize and eventually I will not need this document other than for reference. For now, enjoy infant level information :)
