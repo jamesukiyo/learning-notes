@@ -71,11 +71,13 @@ let = variableThatCanBeChanged
 
 Variables that have not be initialised store the primitive data type `undefined`.
 
-In ES6 we can use backticks and `${}` to interpolate values into a string e.g.
+In ES6 we can use backticks and `${}` to interpolate values into a string - known as 'template literals'. We can also use basic string concatenation too.
 ```JS
 let userName = 'James';
 // prints string 'Hello, James.'
-console.log(`Hello, ${userName}.`);
+console.log(`Hello, ${userName}.`); // template literals - more concise
+
+console.log('Hello, ' + userName + '.'); // string concatenation - better compatibility
 ```
 
 We can use `typeof` keyword to return data type as a string.
@@ -88,6 +90,7 @@ console.log(`"Number" is a ${typeof int}.
 "True or false" is a ${typeof bool}.
 "Word" is a ${typeof string}.`);
 ```
+
 ---
 ### Project 1 - Kelvin Weather
 
@@ -418,6 +421,57 @@ if (runnerAge > 18 && earlyRunner){
 
 ---
 ---
-### Functions
+## Functions
 
-When programming, we often need to complete a specific task or set of tasks multiple times.  A block of code can be group under a single function that can be called like so `function()`.
+When programming, we often need to complete a specific task or set of tasks multiple times.  A block of code can be group under a single function that can be called like so `function()`. This allows us to group a sequence of tasks under a single entity. This way our code will be clearer and more concise.
+
+For example, the code below could be place in a function. Otherwise, we need to type the entire block if we need to calculate the area of 3 rectangles.
+```JS
+const width = 10;  
+const height = 6;  
+const area =  width * height;  
+console.log(area);
+```
+
+### Function Declarations
+
+There are 3 parts to a function declaration:
+- `function` keyword
+- The name of the function or it's identifier followed by brackets `()`
+- The body of the function which can contain a block of statements to perform a specific task. The function body is enclosed within `{}`
+
+Once a function is declared, we can call it. It will complete the task from the function body.
+
+Here is an example:
+```JS
+function sayHello(){ // declare the function and give it a name
+  console.log('Hello World!'); // function body enclosed within {}
+}
+
+sayHello(); // call the function and it will output 'Hello World!'
+sayHello(); // we can do it as many times as we want
+```
+
+### Parameters and Arguments
+
+So far, we've only looked at functions without an input. However, some functions can take inputs and use them to perform a task. For this, we need to specify the functions parameters. The parameters for a function are enclosed within the functions `()` when it is declared and separated by a `,`
+
+Here is an example:
+```JS
+function userInfo(name, age) { // declared function and set parameters name and age
+	console.log('Your name is ' + name + '. You are ' + age + ' years old.');
+}
+userInfo(James, 22); // here we call the function but with arguments, see below
+// output 'Your name is James. You are 22 years old.'
+userInfo(Bob, 38); // here we call it again but with different arguments
+// output 'Your name is Bob. You are 38 years old.'
+```
+
+Once we have a function declared with parameters, we can then give arguments to the function when calling it so the function can use this data. In my example, we used the input (argument) of `James` for the `name` parameter and `22` as the input (argument) for `age`.
+
+### Default Parameters
+
+One new feature added in ES6 is the ability to use default parameters. This allows us to set a predetermined value for a parameter if an argument isn't given.
+
+
+
