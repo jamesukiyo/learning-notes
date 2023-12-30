@@ -305,9 +305,9 @@ if (food === 'banana') {
 
 Switch statement for the same example:
 ```JS
-let groceryItem = 'papaya';  
+let food = 'papaya';  
   
-switch (groceryItem) {  
+switch (food) {  
   case 'banana':  
     console.log('Bananas are $0.49');  
     break;  
@@ -325,3 +325,12 @@ switch (groceryItem) {
 
 The output in both cases is the same: "Papayas are $1.29".
 
+Now let's take a look at how each section of the switch statement works compared to the if...else statement.
+
+| Part of statement | Explanation |
+| ---- | ---- |
+| `switch` keyword | Initiates the statement and is followed by `()` which contains the value that each case will be compared to. In our case this is the variable `'food'` which contains the string 'papayas'. |
+| The main block - between the `{}`. | This is where we place our `case`s. |
+| `case`s | `case`s are what we use to check if a condition is met by the expression that follows. For example, 'papayas' match in our case so 'Papayas are $1.29' would log to the console. |
+| `break` | Once a `case` is `true` we need to exit the code block so it doesn't continue running after the condition was satisfied. We only include `break` after the condition has been met and the necessary action has been taken. E.g. we matched 'papaya' and logged to console THEN `break`. |
+| `default` | In cases, instead of `else`, we use `default`. This is a fallback in case no condition is met. It is essential to include a `default` case. |
