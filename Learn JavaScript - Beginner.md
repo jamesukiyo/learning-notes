@@ -25,17 +25,17 @@ From the beginning, I am aware it is very noob-y but I want to document informat
 | Booleans | `true` |
 | Undefined | `undefined` |
 | Symbol | `%` |
-| Object | `` |
+| Object | need good example |
 
 Built-in arithmetic operators:
 
-| Symbol | Function |
-| ---- | ---- |
-| + | addition |
-| - | subtraction |
-| * | multiplication |
-| / | division |
-| % | remainder |
+| Symbol | Function | Example/info |
+| ---- | ---- | ---- |
+| + | addition | a + b |
+| - | subtraction | a - b |
+| * | multiplication | a * b |
+| / | division | a / b |
+| % | remainder | Divides by x and returns what remains e.g. 10 % 3 = 3 remainder 1<br>so 10 % 3 = 1 |
 
 Objects can have properties, methods and store information. Properties are denoted by appending the object or instance with a full-stop + property name e.g.
 ```JS 
@@ -165,14 +165,14 @@ To compare values we can use different types of operators. Below is a list of so
 
 (Note: === also checks to the data types of the values are matching. == also works otherwise.)
 
-Some basic examples:
+Basic examples:
 ```JS
 10 < 12 // Evaluates to true
 
 'apples' === 'oranges' // false
 ```
 
-Useful example:
+Practical example:
 ```JS
 let hungerLevel = 7;
 
@@ -184,3 +184,46 @@ if (hungerLevel => 7){
 ```
 
 
+### Logical Operators
+
+| Operator | Syntax | Notes |
+| ---- | ---- | ---- |
+| AND | `&&` | Both conditions must evaluate to `true` for the entire condition to evaluate to `true`. |
+| OR | \|\| | Only 1 condition must evaluate to `true`. If it's the 1st condition, the 2nd will not be even be checked. |
+| NOT (bang) | `!` | Reverses or negates the boolean value. Basically makes `true` -> `false` or <br>`false` -> `true`. |
+
+Examples for each are provided below:
+
+AND (`&&`)
+```JS
+let mood = 'happy';
+let happinessLevel = 9;
+
+// BOTH conditions must be met for 'yippee'.
+if (mood === 'happy' && happinessLevel > 9) {
+	console.log('yippee');
+} else { 
+	console.log('no yippee :(');
+}
+```
+
+OR ( || )
+```JS
+if (day === 'saturday' || day === 'sunday') {
+	console.log("It's the weekend!");
+} else {
+	console.log('Weekday... Bruh...');
+}
+
+/* Notice above I was able to deal with the apostrophe in "It's" by using double quotes " " instead of ' '.
+
+This can also be done with a well-placed forward-slash / but " " is easier overall.
+*/
+```
+
+NOT/bang (`!`)
+```JS
+let test = true;
+// prints the opposite of test's boolean value - so false.
+console.log(!test);
+```
