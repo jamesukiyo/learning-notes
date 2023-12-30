@@ -1,4 +1,3 @@
-```JavaScript
 // sets a constant variable that states todays forecast is 293K
 const kelvin = 100;
 // sets a variable that converts Kelvin to Celcius
@@ -14,5 +13,4 @@ ${celcius} degrees Celcius.
 ${kelvin} degrees Kelvin.
 ${newton} degrees ?Newton?.
 
-Please note: All values are rounded down to the nearest whole number.`);
-```
+Please note: All values are rounded down to the nearest whole number.`)
