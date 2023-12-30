@@ -1,7 +1,9 @@
-`James Plummer`
 ## 0. Preface
 
 From the beginning, I am aware it is very noob-y but I want to document information down to the finest details. Later I can summarize and eventually I will not need this document other than for reference. For now, enjoy infant level information :)
+
+---
+---
 ## 1. Introduction
 
 7 Fundamental data types in JS:
@@ -117,6 +119,8 @@ myName = "jAmEs".toUpperCase();
 console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeDogYears} years old in dog years.`);
 ```
 
+---
+---
 ## 2. Conditionals
 
 Conditional statements check condition(s) and perform a task based on them.
