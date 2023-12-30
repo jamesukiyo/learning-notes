@@ -46,7 +46,7 @@ Remember case sensitivity.
 ```JS
 variableName != VariableName.
 ```
-
+---
 ### Variables
 
 ```JS
@@ -74,5 +74,52 @@ console.log(`"Number" is a ${typeof int}.
 "True or false" is a ${typeof bool}.
 "Word" is a ${typeof string}.`);
 ```
+---
+### Project 1 - Kelvin Weather
 
+```JS
+// sets a constant variable that states todays forecast is 293K
+const kelvin = 100;
+// sets a variable that converts Kelvin to Celcius
+let celcius = kelvin - 273;
+// converts celcius temp fahrenheit using conversion equation
+let fahrenheit = Math.floor(celcius * (9/5) + 32);
+// converts celcius to newton using conversion equation
+let newton = Math.floor(celcius * (33/100));
 
+console.log(`The temperature is:
+
+${fahrenheit} degrees Fahrenheit.
+
+${celcius} degrees Celcius.
+
+${kelvin} degrees Kelvin.
+
+${newton} degrees ?Newton?.
+
+Please note: All values are rounded down to the nearest whole number.`);
+```
+---
+### Project 2 - Dog Years
+
+```JS
+// variable set to my age
+let myAge = 22;
+// variable for early dog years. first 2 years dog = 2 * 10.5 human years
+let earlyYears = 2 * 10.5;
+// accounted for 2 years so we remove it from age
+let laterYears = myAge - 2;
+// times 4 to account for later years
+laterYears *= 4;
+/* Can also be done like so:
+let laterYears = (myAge - 2) * 4;
+*/
+
+// addition of above calculations show my age in dog years
+let myAgeDogYears = laterYears + earlyYears;
+// built in method to make my name uppercase
+myName = "jAmEs".toUpperCase();
+
+// string interpolation to display sentence about name and ages
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeDogYears} years old in dog years.`);
+```
