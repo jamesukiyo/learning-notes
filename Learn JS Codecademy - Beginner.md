@@ -36,6 +36,7 @@ Built-in arithmetic operators:
 | * | multiplication |
 | / | division |
 | % | remainder |
+
 Objects can have properties, methods and store information. Properties are denoted by appending the object or instance with a full-stop + property name e.g.
 ```JS 
 // prints length of string
