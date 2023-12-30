@@ -162,6 +162,7 @@ To compare values we can use different types of operators. Below is a list of so
 | Greater than or equal to | >= |
 | Is equal to | === |
 | Is not equal to | !== |
+
 (Note: === also checks to the data types of the values are matching. == also works otherwise.)
 
 Some basic examples:
