@@ -584,7 +584,6 @@ Another way to define a function is by using a function expression. To define a 
 
 Let's take a look at an example:
 ```JS
-
 const funcVariable = function(day) {
 	if (day === 'Monday') {
 		return true;
@@ -592,7 +591,47 @@ const funcVariable = function(day) {
 		return false;
 		}
 }
-
-console.log(funcVariable())
+console.log(funcVariable('Tuesday'); // prints false
+```
+The easiest way to think of this is by comparing it to a normal function call. Here is an identical situation with a normal function.
+```JS
+function funcVariable(day) {
+	if (day === 'Monday') {
+		return true;
+	} else {
+		return false;
+		}
+}
+console.log(funcVariable('Tuesday'); // prints false
+```
+The only difference is how we declare the variable (and also that we can make them anon)
+```JS
+// function expression
+const funcVariable = function(day) {
+};
+// standard function declaration
+function funcVariable(day) {
+};
 ```
 
+According to my research, the main advantage of function expression is the fact that they are stored in a `const` constant variable that can not be changed. This may be appropriate when dealing with larger scripts and collaborative projects? Not sure, need to read more but it appears to a better practice than standard function declaration. Possibly due to the fact that they aren't hoisted so they can not be called until they are defined unlike normally declared functions.
+
+---
+
+### Arrow Functions
+
+ES6 also marked the release of arrow function syntax which gives us a shorter way to write functions by using the "fat arrow" notation `() =>`. This removes the need to type `function` every time you need to create a function. They are written in a similar way to function expressions.
+
+Instead, the parameters are included in `()` before the `=>` that points to the function body `{}`. I'll add various examples below:
+```JS
+// arrow function
+const arrowFunc = (parameter1, parameter2) => {
+};
+// function expression
+const funcExprsn = function(parameter1, parameter2) {
+};
+// normal function declaration
+function normalFunc(parameter1, parameter2) {
+}
+```
+Notice how arrow functions and function expressions are anonymous. As mentioned before, an anonymous function has no name but, it can still be assigned to a variable. With a no
