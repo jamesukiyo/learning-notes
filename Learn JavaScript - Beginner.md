@@ -550,3 +550,49 @@ Here we check if the width and height entered are positive, if they are not we `
 
 ### Helper Functions
 
+It's also possible to return the value of a function inside another function. These functions being called within another function are often called helper functions. Each function carries out a specific task which makes code easier to read and debug if necessary. It allows us to break down larger more difficult tasks into smaller more manageable tasks.
+
+Let's look at an example of a helper function in action:
+```JS
+function multiplyNineOverFive(number) {  // step 3
+  return number * (9/5);  
+};  
+  
+function getFahrenheit(celsius) {  // step 2
+  return multiplyNineOverFive(celsius) + 32;  // step 4
+};  
+  
+getFahrenheit(15); // step 1
+```
+We can see that the function `getFahrenheit(15)` was called with the argument `15` for the `celcius` parameter in this case. 
+
+The code block inside `getFahrenheit()` calls `multiplyNineOverFive(15)` with the argument `15`. In this case, we can see that the `15` was used as an argument for `celcius` and now  `celcius` is being used as an argument for `multiplyNineOverFive()` replacing the `number` parameter with the argument `15`.
+
+Now that we can see the original call with argument `15` -> `celcius` parameter as argument -> `number` parameter as argument, it's easier to understand.  We can see that the code block for `multiplyNineOverFive(15)` = 15 * (9/5) which evaluates to 27. 27 is then returned back to the function call `getFahrenheit()` which simply adds 32 which finally returns 59 to the original function call. So 15 degrees C = 59 degrees F.
+
+To summarise: 
+
+`getFahrenheit(15)` -> `multiplyNineOverFive(15)` -> returns 27 to `getFahrenheit(15)` -> 32 is added to complete the function call.
+
+This is a difficult topic to explain in words. I added comments to the example above to try and help. I will probably improve this section in the future.
+
+---
+
+### Function Expressions
+
+Another way to define a function is by using a function expression. To define a function inside an expression we still use the `function` keyword however, in a function expression the function name is usually removed - this is known as an anonymous function. Instead they can be stored in a variable so it can be referred to as a normal function.
+
+Let's take a look at an example:
+```JS
+
+const funcVariable = function(day) {
+	if (day === 'Monday') {
+		return true;
+	} else {
+		return false;
+		}
+}
+
+console.log(funcVariable())
+```
+
