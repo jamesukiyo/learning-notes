@@ -813,4 +813,3 @@ calculateSleepDebt();
 
 ### Scope
 
-Scope
