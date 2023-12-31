@@ -625,13 +625,191 @@ ES6 also marked the release of arrow function syntax which gives us a shorter wa
 Instead, the parameters are included in `()` before the `=>` that points to the function body `{}`. I'll add various examples below:
 ```JS
 // arrow function
-const arrowFunc = (parameter1, parameter2) => {
+const arrowFunction = (parameter1, parameter2) => {
 };
 // function expression
-const funcExprsn = function(parameter1, parameter2) {
+const functionExpression = function(parameter1, parameter2) {
 };
 // normal function declaration
-function normalFunc(parameter1, parameter2) {
+function normalFunction(parameter1, parameter2) {
 }
 ```
-Notice how arrow functions and function expressions are anonymous. As mentioned before, an anonymous function has no name but, it can still be assigned to a variable. With a no
+Notice how arrow functions and function expressions are anonymous. As mentioned before, an anonymous function has no name but, it can still be assigned to a variable. With a normal function declaration, anonymous functions are not possible.
+
+It's good to be familiar with the different ways functions can be written. As mentioned before, based on my brief research, arrow functions and function expressions appear to be the best way forward.
+
+---
+
+### Concise Body Arrow Functions
+
+Now we'll discuss some more niche points about arrow functions. JavaScript provides several ways to refactor arrow function syntax. The most condensed form is known as concise body.
+
+Depending on the number of parameters needed for a function, we can adjust how it is written to make it more concise.
+```JS
+// 0 parameters
+const functionName = () => {};
+// 1 parameter
+const functionName = parameter1 => {};
+// 2 or more parameters
+const functionName = (parameter1, parameter2) => {};
+```
+So, let's outline the differences:
+
+| Parameters | Changes |
+| ---- | ---- |
+| 0 | `()` still required |
+| 1 | `()` not required |
+| 2+ | `()` still required |
+
+This is only the beginning of refactoring functions too... Now let's take a look at something called an implicit return. If a function block only needs a single line we can remove the curly brackets `{}` and make use of an implicit return to remove the `return` keyword. For example:
+```JS
+const total = (number) => {
+	return number + number;
+};
+```
+Can be adjusted to this based on it's parameter count (1):
+```JS
+const total = number => {
+	return number + number;
+};
+```
+Which can now be adjusted to this with an implicit return:
+```JS
+const total = num => num + num;
+```
+We can remove the `return` keyword and without the curly brackets `{}` on a single line block, whatever the line evaluates to will be automatically returned. The contents of the block should immediately follow the `=>`.
+
+---
+
+### Project 5 - Rock, Paper, or Scissors
+
+```JS
+// rock paper scissors (change userInput variable on line 7)
+
+console.log('Hello James.');
+
+// Function to get the user's choice
+const getUserChoice = userInput => {
+  userInput = 'paper';
+  userInput = userInput.toLowerCase();
+  if ((userInput === 'rock') || (userInput === 'paper') || (userInput === 'scissors')) {
+    return userInput;
+  } else {
+    return 'Accepted inputs are: "rock", "paper" or "scissors".';
+  }
+};
+let userChoice = getUserChoice();
+console.log(`You choose ${userChoice}.`);
+
+
+// function to get computer's choice
+function getComputerChoice() {
+  // Generate random integer between 0-2.
+  let computerChoice = Math.floor(Math.random() * 3);
+  // Computer's choice based on random number
+  switch (computerChoice) {
+    case 0:
+      return 'rock';
+    case 1:
+      return 'paper';
+    case 2:
+      return 'scissors';
+    default:
+      return 'An error has occurred.';
+  }
+}
+let computerChoice = getComputerChoice();
+console.log(`Computer chooses ${computerChoice}.`);
+
+
+// Function to determine the winner between user and computer
+function determineWinner(userChoice, computerChoice) {
+  // Checks if it's a tie
+  if (userChoice === computerChoice) {
+    return 'It\'s a tie...';
+
+  } else if (
+    // winning scenarios for user
+    (userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    return 'You win!';
+  } else {
+    return 'Computer wins!';
+  }
+}
+// prints result of determineWinner function
+console.log(determineWinner(userChoice, computerChoice));
+```
+
+### Project 6 - Sleep Debt Calculator
+
+```JS
+// Function to get the sleep hours for each day
+function getSleepHours(day) {
+  switch (day.toLowerCase()) {
+    case 'monday':
+      return 7;
+    case 'tuesday':
+      return 8;
+    case 'wednesday':
+      return 8;
+    case 'thursday':
+      return 8;
+    case 'friday':
+      return 8;
+    case 'saturday':
+      return 8;
+    case 'sunday':
+      return 8;
+    default:
+      return 'error';
+  }
+};
+
+// Function to calculate the total actual sleep hours for the week
+function getActualSleepHours() {
+  return (
+    getSleepHours('monday') +
+    getSleepHours('tuesday') +
+    getSleepHours('wednesday') +
+    getSleepHours('thursday') +
+    getSleepHours('friday') +
+    getSleepHours('saturday') +
+    getSleepHours('sunday')
+  );
+};
+
+// Function to calculate the ideal sleep hours for the week based on a given daily ideal hours
+function getIdealSleepHours(idealHours) {
+  return idealHours * 7;
+}
+
+// Function to compare actual and ideal sleep hours and provide feedback
+function calculateSleepDebt() {
+  let actualSleepHours = getActualSleepHours();
+  let idealSleepHours = getIdealSleepHours(8); // Assuming 8 hours ideal sleep per night
+  // Compare actual and ideal sleep hours and provide feedback
+  if (actualSleepHours === idealSleepHours) {
+    console.log("You're sleeping the perfect amount!");
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log(
+      `You're sleeping ${actualSleepHours - idealSleepHours} hour(s) more than needed.`
+    );
+  } else {
+    console.log(
+      `You're sleeping ${idealSleepHours - actualSleepHours} hour(s) less than needed.`
+    );
+  }
+}
+
+// Calculate and display sleep debt information
+calculateSleepDebt();
+```
+
+---
+---
+
+### Scope
+
