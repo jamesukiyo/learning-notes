@@ -71,6 +71,7 @@ var = preES6VariableName
 const = constantVariable
 let = variableThatCanBeChanged
 ```
+(Note: there are more differences than what are mentioned above, they will be discussed later. For now, this is enough information.)
 
 Variables that have not be initialised store the primitive data type `undefined`.
 
@@ -811,5 +812,100 @@ calculateSleepDebt();
 ---
 ---
 
-### Scope
+## Scope
 
+Scope defines where variables can be accessed or referenced. Some variables can be accessed throughout an entire program, others may only be available in a specific context.
+
+First of all, we need to understand what a block is. We've seen blocks used in functions and if statements. A block is the code that can be found within curly brackets `{}`. They serve as an important structural marker for our code.
+
+Let's look at a quick example:
+```JS
+if (colour) {
+	let colour = 'yellow';
+	console.log(colour); // prints 'yellow' because colour = true
+}
+```
+
+---
+
+### Global Scope
+
+We think about scope in relation to blocks because variables can exist within or outside of blocks. In global scope, variables are declared outside of blocks which makes them accessible throughout the entire program.
+
+For example:
+```JS
+const myFavColour = 'red'; // global scope variable (outside function block)
+
+const returnFavColour = () => { // arrow function assigned to variable returnFavColour
+	return myFavColour; // 'red'
+}
+
+console.log(returnFavColour()); // prints 'red'
+```
+
+---
+
+### Block Scope
+
+Variables defined inside a code block are only accessible to the code within the `{}`. This is called block scope or local scope.
+
+For example:
+```JS
+const logFavColour = () => {
+	let colour = 'red';
+	console.log(colour); // prints 'red'
+};
+logFavColour(); // prints 'red' because the arrow function variable has global scope
+console.log(colour); // throws ReferenceError because colour has block scope
+```
+
+---
+
+### Scope Pollution
+
+At first sight, it may appear to be a good idea to have all variables accessible globally. However, too many globally assigned variables can cause problems in a program. When a global variable is declared, it goes to the global namespace which allows them to be accessed anywhere in a program. The variables remain in the global namespace until the program is finished which means our global namespace can fill up really quickly. 
+
+Scope pollution is when we have too many global variables that exist in our global namespace or when we reuse variables across different scopes. This can make it difficult to keep track of our different variables and can lead to accidents e.g. when globally scope variables collide with other variables which cause unexpected behaviour in our code. 
+
+For example:
+```JS
+let number = 50; // variable number declared and given value of 50
+
+const logNumber = () => {
+	number = 100; // number variable is now reassigned to 100
+	console.log(number); // reassigned number is printed
+};
+
+logNumber(); // prints 100
+console.log(number); // also prints 100 but we've now unknowingly changed the global variables value
+```
+
+---
+
+### Practicing Good Scoping
+
+As we've seen previously with the issues we faced with globally scoped variables, we should now have a better understanding as to why tighter scoped variables are best practice. Some reasons:
+
+- Makes code easier to read because it is organized into more discrete sections via blocks.
+- Makes the code more understandable because we can see which variables are associated with which parts of the program.
+- Easier to maintain due to the discrete sections (more modular).
+- Saves memory in code because the global namespace isn't polluted and the variables cease to exist after the code block finishes running.
+
+A good example from Codecademy:
+```JS
+const logVisibleLightWaves = () => {
+
+  let lightWaves = 'Moonlight';
+  let region = 'The Arctic';
+  
+  if (region === 'The Arctic'){
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves); // exists within the block so we can print 'Northern Lights'
+  }
+  console.log(lightWaves); // exists OUTSIDE the block so we can print 'Moonlight' with the same variable name
+};
+
+  
+
+logVisibleLightWaves(); // prints 'Northern Lights' AND 'Moonlight'
+```
