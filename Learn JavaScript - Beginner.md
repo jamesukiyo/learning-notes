@@ -13,6 +13,12 @@ If, if...else, else statements, comparison operators, logical operators, truthy 
 ### 3. Functions
 
 
+### 4. Scope
+
+
+### 5. Arrays
+
+
 
 ---
 ---
@@ -972,4 +978,6 @@ logTime(name2, days2);
 
 ---
 ---
+
+## Arrays
 
