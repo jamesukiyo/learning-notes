@@ -902,10 +902,74 @@ const logVisibleLightWaves = () => {
     let lightWaves = 'Northern Lights';
     console.log(lightWaves); // exists within the block so we can print 'Northern Lights'
   }
-  console.log(lightWaves); // exists OUTSIDE the block so we can print 'Moonlight' with the same variable name
+  console.log(lightWaves); // exists OUTSIDE the block so we can print 'Moonlight' with the same variable name because it is still within the function block but outside the if statement
 };
 
   
 
 logVisibleLightWaves(); // prints 'Northern Lights' AND 'Moonlight'
 ```
+
+---
+
+### Project 7 - Training Days
+
+```JS
+const name = "Nala"; // globally scoped variable 'name'
+
+// function to produce random number and return event name based on number
+const getRandEvent = () => { // globally scoped variable used for function
+  const random = Math.floor(Math.random() * 3); // locally scoped variable 'random'
+  if (random === 0) {
+    return "Marathon";
+  } else if (random === 1) {
+    return "Triathlon";
+  } else if (random === 2) {
+    return "Pentathlon";
+  }
+};
+
+// function to determine number of days to train based on event argument
+const getTrainingDays = (event) => {
+  let days; // locally scoped variable 'day'
+  if (event === "Marathon") {
+    days = 50;
+  } else if (event === "Triathlon") {
+    days = 100;
+  } else if (event === "Pentathlon") {
+    days = 200;
+  }
+
+  return days;
+};
+
+// globally scoped variable with function that takes 2 arguments 'name', 'event' and prints string with their info
+const logEvent = (name, event) => { 
+  console.log(`${name}'s event is: ${event}`);
+};
+
+// globally scope variable with function that takes 2 arguments 'name', 'day' and prints string with their info
+const logTime = (name, days) => {
+  console.log(`${name}'s time to train is: ${days} days`);
+};
+
+// globally scope variables that call functions
+const event = getRandEvent();
+const days = getTrainingDays(event); // calls function with argument 'event'
+
+logEvent(name, event); // calls logEvent function with name ('Nala') and event (from function getRandEvent())
+logTime(name, days); // calls logTime function with name ('Nala') and days (from getTrainingDays(event) function)
+
+// here we can assign new global variables for a different person and use the same functions for them to determine their personal training days information
+const event2 = getRandEvent();
+const days2 = getTrainingDays(event2);
+const name2 = "Warren";
+
+// these perform the same tasks as above but with different variables
+logEvent(name2, event2);
+logTime(name2, days2);
+```
+
+---
+---
+
