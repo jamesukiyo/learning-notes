@@ -1076,4 +1076,20 @@ console.log(myItems);
 ```
 In the same way as for the `.length` property, we use dot notation to connect `push` to `myItems`. Then we can call it like a function - `.push()` is a built in function that can be used directly on an array. Here we are giving it 2 arguments 'item 3' and 'item 4' but it can take multiple arguments, here we only want to add 2 elements.
 
-``
+`.push()` changes or mutates `myItem`. You may also see `.push()` referred to as a destructive array method since it changes the initial array.
+
+---
+### The .pop() method
+
+Another method we can use is `.pop()` which removes the last item of an array. For example:
+```JS
+const myItems = ['item 0', 'item 1', 'item 2'];  
+  
+const removedItem = myItems.pop(); // declare new variable = popped element
+  
+console.log(myItems); 
+// Output: [ 'item 0', 'item 1' ]  
+console.log(removedItem); 
+// Output: item 2
+```
+`.pop()` does not take any arguments like `.push()` did previously. It can only remove the last element of an array. Here we are using it to remove the last element from `myItems` and store it in the variable `removedItem`. Like `.push()`, `.pop() `
