@@ -1065,4 +1065,15 @@ console.log(objectives.length); // clogs 3 because objectives length is 3 elemen
 ---
 ### The .push() method
 
-There are also built-in methods that make working with arrays easier
+There are also built-in methods that make working with arrays easier. These methods are specifically called on arrays to make common tasks like adding or removing elements easier. One method known as `.push()` allows us to add items to the end of an array. Here is an example:
+```JS
+const myItems = ['item 0', 'item 1', 'item 2'];  
+
+myItems.push('item 3', 'item 4');  
+  
+console.log(myItems);  
+// Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4'];
+```
+In the same way as for the `.length` property, we use dot notation to connect `push` to `myItems`. Then we can call it like a function - `.push()` is a built in function that can be used directly on an array. Here we are giving it 2 arguments 'item 3' and 'item 4' but it can take multiple arguments, here we only want to add 2 elements.
+
+``
