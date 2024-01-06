@@ -1099,10 +1099,20 @@ console.log(removedItem);
 
 There are many other array methods. A full list can be found in MDN and Codecademy docs. Below I'll mention a few others and some basic examples:
 
-`.shift()` removes the first element from an array thus shifting the following elements down one place.
+`.shift()` removes the first element from an array thus shifting the following elements down one place. It takes no arguments.
 ```JS
 const groceries = ['orange juice', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon'];
 
 groceries.shift(); // In this case 'orange juice' is removed
 console.log(groceries); // output: ['bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon']
 ```
+
+`.unshift` adds an element to the beginning of an array. It takes arguments that are the items we want to add to the beginning of the array.
+```JS
+const groceries = ['orange juice', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon'];
+
+groceries.unshift('popcorn'); // In this case 'popcorn' is added to the beginning
+console.log(groceries); // output: ['popcorn', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon']
+```
+
+`.slice()` is used to create a shallow copy of part or all of an array without modifying the original array. A shallow copy duplicates the contents of an object into a new instance by reference which is why changes to the copy are not reflected in the origi
