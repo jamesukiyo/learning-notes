@@ -1031,3 +1031,21 @@ Here we updated the 2nd element so 'monitor' to now be 'imposter'. When we clog 
 ---
 ### Arrays with let and const
 
+As we discussed in the variables section earlier, we can declare with both `let` and `const` keywords. Variables declared with `let` can be reassigned. Variables declared with the `const` keyword can not be reassigned. However, elements in an array declared with `const` remain mutable, meaning that we can change the contents of a `const` array but we can not reassign a new array or a different value.
+
+Let's take a look at an example from Codecademy:
+```JS
+// array that can be assigned a new array or a different value
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+// array that can not be assigned a new array or a different value
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = 'Mayo';
+console.log(condiments);
+
+condiments = ['Mayo'];
+console.log(condiments);
+
+utensils[3] = 'Spoon';
+console.log(utensils);
+```
