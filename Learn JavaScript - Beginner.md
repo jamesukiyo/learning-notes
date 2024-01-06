@@ -1001,4 +1001,21 @@ The code above will print "['Paris', 'Rome', 'Stockholm']" to the console, exact
 ---
 ### Accessing Elements
 
-Each element in an array has a numbered position known as it's index. We can access individual items by using their index which is similar to our shopping list earlier where item 1. was eggs. The key difference here is that arrays in JavaScript are zero-indexed, meaning the positions start at 0 not 1.
+Each element in an array has a numbered position known as it's index. We can access individual items by using their index which is similar to our shopping list earlier where item 1. was eggs. The key difference here is that arrays in JavaScript are zero-indexed, meaning the positions start at 0 not 1. Let's look at a couple of examples:
+```JS
+let words = ['mouse', 'keyboard', 'monitor']; 
+
+console.log(words[1]); // prints position 1 so 'keyboard' to the console
+```
+
+Here's another way we can use index - to access individual characters in a string:
+```JS
+const name = 'James Plummer';
+
+console.log(name[4]); // prints character position 4 so 's' to the console
+```
+
+---
+
+### Updating Elements
+
