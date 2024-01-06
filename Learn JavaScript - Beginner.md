@@ -1040,12 +1040,14 @@ let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
 // array that can not be assigned a new array or a different value
 const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
 
-condiments[0] = 'Mayo';
-console.log(condiments);
+condiments[0] = 'Mayo'; // reassigns position 0 of condiments to = 'Mayo'
+console.log(condiments); // clogs ['Mayo', 'Mustard', 'Soy Sauce', 'Sriracha']
 
-condiments = ['Mayo'];
-console.log(condiments);
+condiments = ['Mayo']; // assigns new array to condiments - only contains 1 element now
+console.log(condiments); // clogs ['Mayo']
 
-utensils[3] = 'Spoon';
-console.log(utensils);
+utensils[3] = 'Spoon'; // reassigns position 3 of utensils to = 'Spoon'
+console.log(utensils); // clogs ['Fork', 'Knife', 'Chopsticks', 'Spoon']
+
+utensils = ['Spoon']; // gives us a "TypeError: Assignment to constant variable." because we tried to give the variable a new array
 ```
