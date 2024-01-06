@@ -1092,4 +1092,17 @@ console.log(myItems);
 console.log(removedItem); 
 // Output: item 2
 ```
-`.pop()` does not take any arguments like `.push()` did previously. It can only remove the last element of an array. Here we are using it to remove the last element from `myItems` and store it in the variable `removedItem`. Like `.push()`, `.pop() `
+`.pop()` does not take any arguments like `.push()` did previously. It can only remove the last element of an array. Here we are using it to remove the last element from `myItems` and store it in the variable `removedItem`. Like `.push()`, `.pop()` is a method that mutates the initial array.
+
+--- 
+### More Array Methods
+
+There are many other array methods. A full list can be found in MDN and Codecademy docs. Below I'll mention a few others and some basic examples:
+
+`.shift()` removes the first element from an array thus shifting the following elements down one place.
+```JS
+const groceries = ['orange juice', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon'];
+
+groceries.shift(); // In this case 'orange juice' is removed
+console.log(groceries); // output: ['bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon']
+```
