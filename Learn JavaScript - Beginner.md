@@ -1019,3 +1019,12 @@ console.log(name[4]); // prints character position 4 so 's' to the console
 
 ### Updating Elements
 
+Now we understand how to access elements, we can update them. Like this:
+```JS
+let words = ['mouse', 'keyboard', 'monitor'];
+
+words[2] = 'imposter';
+console.log(words);
+console.log(words[2]);
+```
+Here we updated the 2nd element so 'monitor' to now be 'imposter'. When we clog it, it will output "['mouse', 'keyboard', 'imposter']". If we clog the 2nd position of words, it will o
