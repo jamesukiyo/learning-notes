@@ -977,3 +977,28 @@ logTime(name2, days2);
 
 ## Arrays
 
+Arrays are an important part of programming. They allow us to organize and store data.
+
+For example, a shopping list for 1. eggs, 2. milk and 3. butter could be written as an array like this:
+```JS
+let shoppingList = ['eggs', 'milk', 'butter'];
+```
+As you can see, arrays are stored in `[]` and elements (items) in the list are separated by `,`. Arrays can store any data type (such as strings, numbers and booleans). Like a list, arrays are ordered meaning each element has a numbered position. Unlike lists in real life, arrays start at a position of 0, meaning the first element in an array is position 0, the second element is position 1 etc.
+
+Here is an example of an array containing elements with different data types:
+```JS
+let diffDataTypes = ['string', 1, true];
+```
+
+Let's see what happens when we clog an array:
+```JS
+let holidayLocations = ['Paris', 'Rome', 'Stockholm'];
+
+console.log(holidayLocations);
+```
+The code above will print "['Paris', 'Rome', 'Stockholm']" to the console, exactly as it is written in the array.
+
+---
+### Accessing Elements
+
+Each element in an array has a numbered position known as it's index. We can access individual items by using their index which is similar to our shopping list earlier where item 1. was eggs. The key difference here is that arrays in JavaScript are zero-indexed, meaning the positions start at 0 not 1.
