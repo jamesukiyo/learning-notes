@@ -1115,4 +1115,4 @@ groceries.unshift('popcorn'); // In this case 'popcorn' is added to the beginnin
 console.log(groceries); // output: ['popcorn', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon']
 ```
 
-`.slice()` is used to create a shallow copy of part or all of an array without modifying the original array. A shallow copy duplicates the contents of an object into a new instance by reference which is why changes to the copy are not reflected in the origi
+`.slice()` is used to create a shallow copy of part or all of an array without modifying the original array. A shallow copy duplicates the contents of an object into a new instance by reference which is why changes to the copy are not reflected in the original.
