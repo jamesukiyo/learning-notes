@@ -1051,3 +1051,18 @@ console.log(utensils); // clogs ['Fork', 'Knife', 'Chopsticks', 'Spoon']
 
 utensils = ['Spoon']; // gives us a "TypeError: Assignment to constant variable." because we tried to give the variable a new array
 ```
+
+---
+### The .length property
+
+Arrays have a built-in property in JS which returns the number of items in an array. It is called `length` and can be access by chaining the property to the name of the array using `.` dot notation. Here is an example:
+```JS
+const objectives = ['Learn JS', 'Master JS', 'Become JS GOD'];
+
+console.log(objectives.length); // clogs 3 because objectives length is 3 elements
+```
+
+---
+### The .push() method
+
+There are also built-in methods that make working with arrays easier
