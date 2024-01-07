@@ -1322,6 +1322,9 @@ for (let i = 0; i < myArray.length; i++) {
 }
 ```
 Let's take a look at each part:
-1. So we start by declaring 2 variables `myArray` and `yourArray` which contain numbers we want to compare.
+1. So we start by declaring 2 variables `myArray` and `yourArray` which contain arrays of numbers we want to compare.
 2. Next we have a standard `for` loop that iterates through the array `myArray` as long as `i` is less than `myArray.length`(3). It works the same way as in previous examples.
-3. The main difference here, is that instead of listing `vacationSpots` we now perform another `for` loop instead.
+3. The main difference here, is that instead of listing `vacationSpots` we now perform another `for` loop instead for each iteration of the outer `for` loop.
+4. This nested `for` loop iterates through the entire `yourArray` for each `myArray` element, using  `j` to indicate the index of the 2nd array, until the element at `myArray[i]` is equal to the element at `yourArray[j]`.
+5. Once an equal number is found, a message is clogged to indicate the number that exists in both arrays.
+6. In this example, "Both arrays have the number: 19" will be clogged.
