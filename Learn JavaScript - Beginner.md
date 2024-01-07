@@ -1223,3 +1223,10 @@ A typical `for` loop contains an iterator variable which usually appears in all 
 1. The iterator variable is initialized;
 2. It is checked against a stopping condition; 
 3. Then it is assigned a new value on each loop iteration.
+Here's an example which I'll explain below:
+```JS
+for (let counter = 5; counter < 11; counter++){
+
+  console.log(counter);
+}
+```
