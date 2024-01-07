@@ -1132,11 +1132,14 @@ Throughout the 'Arrays' section of these notes, we discussed how arrays are muta
 ```JS
 const flowers = ['peony', 'daffodil', 'marigold'];  
   
-function addFlower(arr) {  
-  arr.push('lily');  
+function addFlower(arr) {  // here we have a function with a parameter 'arr'
+  arr.push('lily');  // whatever array is used as an argument for the parameter 'arr' will have the string "lily" pushed to it - remember that .push() mutates an array by adding an element to the end of it
 }  
   
-addFlower(flowers);  
+addFlower(flowers);  // here we call the function with the argument of the 'flowers' array
+
+// based on the function body, we can see that it pushes "lily" to the array that is given as an argument
   
-console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
+console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily'] 
 ```
+Above, we can see that the array was mutated within a function but, the array remains mutated outside the function as well. This concept can be called a "pass-by reference" since what we
