@@ -1287,4 +1287,8 @@ Now let's take a look at how the 2nd part functions. As usual, we start the for 
 2. `i < vacationSpots.length` - here is the stopping condition, so the loop will keep iterating as long as the iterator variable `i` is less than the `.length` of the array `vacationSpots` which is 3.
 3. `i++` - the iteration statement which adds 1 to `i` for each loop.
 
-Finally, we clog the phrase 'I would love to visit `${vacationSpots[i]}`'. This may look confusing but it basically means that for each iteration, we output the phrase at `i`'s position and the template literal changes to be Bali, Paris or Rovaniemi from the array `vacationSpots`
+Finally, we clog the phrase "I would love to visit `${vacationSpots[i]}`". This may look confusing but it basically means that for each iteration, we output the phrase at `i`'s position and the template literal changes to be Bali, Paris or Rovaniemi from the array `vacationSpots`. Let's walk through each step of the whole program:
+
+1. `i` starts at 0, which is less than `vacationSpots.length`(3) so the stopping condition isn't met (statement remains `true`)
+2. "I would love to visit `${vacationSpots[i]}`" is clogged and because `i` is 0 for this iteration, we take the element at position 0 in the array `vacationSpots` which is 'Bali'.
+
