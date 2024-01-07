@@ -1332,5 +1332,7 @@ Let's take a look at each part:
 8. Note that both arrays will run until `i` or `j` is no longer greater than `myArray.length` and `yourArray.length` respectively. The `if` statement doesn't stop the loop because the statement is still true in the loop.
 
 Now let's go through it quickly:
-1. `i = 0` which is less than `myArray.length`(3)
-2. 
+1. `i = 0` which is less than `myArray.length`(3) so the inner `for` loop runs
+2. Now we go through the inner `for` loop:
+	1. `j = 0` which is less than `yourArray.length`(3) - statement is true, loop runs
+	2. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 0`)
