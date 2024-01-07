@@ -1161,4 +1161,42 @@ const nestedEx = [[1], [2, 3]];
 console.log(nestedEx[1]); // Output: [2, 3]  
 console.log(nestedEx[1][0]); // Output: 2
 ```
-On line 4, you can see we first index on the 'outer' array, position 1
+On line 4, you can see we first index on the 'outer' array, position 1 and then called position 0 on the nested 'inner' array which gave us an output of 2 because it is the 1st element in the nested array. Remember that indexing begins at 0 so index 0 is the first element.
+
+---
+
+### Project 8 - Secret Message
+
+```JS
+// Secret message array containing words
+let secretMessage = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'easily', 'the', 'first', 'time,', 'it', 'is', 'about', 'what', 'you', 'can', 'figure', 'out.', '-2015,', 'Chris', 'Pine,', 'Learn', 'JavaScript'];
+
+// Remove the last entity from the array
+secretMessage.pop();
+
+// Add two entities ('to' and 'Program') to the end of the array
+secretMessage.push('to', 'Program');
+
+// Change the array entity at index 7 to 'right'
+secretMessage[7] = 'right';
+
+// Remove the first entity from the array
+secretMessage.shift();
+
+// Add 'Programming' to the beginning of the array
+secretMessage.unshift('Programming');
+
+// Replace a portion of the array (from index 6 to index 10) with 'from'
+secretMessage.splice(6, 5, 'from');
+
+// Display the secret message by joining the array elements with a space
+console.log(`Secret message = ${secretMessage.join(' ')}`);
+
+// Display the length of the array
+console.log(`Array length = ${secretMessage.length}`);
+```
+
+---
+---
+## Loops
+
