@@ -1289,6 +1289,17 @@ Now let's take a look at how the 2nd part functions. As usual, we start the for 
 
 Finally, we clog the phrase "I would love to visit `${vacationSpots[i]}`". This may look confusing but it basically means that for each iteration, we output the phrase at `i`'s position and the template literal changes to be Bali, Paris or Rovaniemi from the array `vacationSpots`. Let's walk through each step of the whole program:
 
-1. `i` starts at 0, which is less than `vacationSpots.length`(3) so the stopping condition isn't met (statement remains `true`)
+1. `i` starts at 0, which is less than `vacationSpots.length`(3) so the stopping condition isn't met (statement remains `true`).
 2. "I would love to visit `${vacationSpots[i]}`" is clogged and because `i` is 0 for this iteration, we take the element at position 0 in the array `vacationSpots` which is 'Bali'.
+3. The full output is "I would love to visit Bali".
+4. Then we have the iteration statement `i++` which increases `i` to equal 1.
+5. The steps above repeat until `i` is no longer less than the `vacationSpots.length` which is 3. In this case, the stopping condition is met and the clog will not occur.
+
+So, we have:
+
+1. `i = 0` which clogs "I would love to visit Bali"
+2. `i = 1` which clogs "I would love to visit Paris"
+3. `i = 2` which clogs "I would love to visit Rovaniemi"
+4. `i = 3` causes us to reach the stopping cond
+
 
