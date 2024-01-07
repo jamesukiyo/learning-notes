@@ -1266,4 +1266,17 @@ The code block within the `{}` will run until the condition evaluates false, so 
 
 `for` loops are very useful for iterating over data structures. For example, we can use a `for` loop to perform the same operation on each element of an array. Imagine we owned a store and wanted to increase the price of all our products - this would be time consuming as it would require code for each product. Instead we can use a `for` loop to iterate through the array of products.
 
-To loop through each element of an array, a `for` loop should use the array's `.length` property in it's condition, we have used this property previously.
+To loop through each element of an array, a `for` loop should use the array's `.length` property in it's condition, we have used this property previously. Let's take a look at an example and how it works:
+```JS
+const vacationSpots = ['Bali', 'Paris', 'Rovaniemi'];
+
+for (let i = 0; i < vacationSpots.length; i++){
+
+  console.log(`I would love to visit ${vacationSpots[i]}`);
+}
+/* Output:
+I would love to visit Bali
+I would love to visit Paris
+I would love to visit Rome */
+```
+So, first we need an array, in this case we used a `cons`
