@@ -1311,8 +1311,9 @@ When a loop runs inside another loop, it is called a nested loop. One use for a 
 const myArray = [6, 19, 20];  
 const yourArray = [19, 81, 2];  
 
+// outer loop
 for (let i = 0; i < myArray.length; i++) {  
-
+// inner loop with an if statement
   for (let j = 0; j < yourArray.length; j++) {  
     if (myArray[i] === yourArray[j]) {  
       console.log('Both arrays have the number: ' + yourArray[j]);  
@@ -1320,3 +1321,7 @@ for (let i = 0; i < myArray.length; i++) {
   }  
 }
 ```
+Let's take a look at each part:
+1. So we start by declaring 2 variables `myArray` and `yourArray` which contain numbers we want to compare.
+2. Next we have a standard `for` loop that iterates through the array `myArray` as long as `i` is less than `myArray.length`(3). It works the same way as in previous examples.
+3. The main difference here, is that instead of listing `vacationSpots` we now perform another `for` loop instead.
