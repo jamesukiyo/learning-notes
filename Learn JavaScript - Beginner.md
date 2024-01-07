@@ -1259,5 +1259,11 @@ for (let counter = 9; counter >= 5; counter--){
 2. The stopping condition is `counter >= 5` so the counter will run as long as the iterator variable `counter` is greater than or equal to 5.
 3. The iteration statement is `counter--` which means for each loop, the value of `counter` will decrease by 1. First iteration will be 9, second will be 8 etc.
 
-The code block within the `{}` will run until the condition evaluates false, so when `counter  9`.
+The code block within the `{}` will run until the condition evaluates false, so when `counter < 5`.
 
+---
+### Looping through Arrays
+
+`for` loops are very useful for iterating over data structures. For example, we can use a `for` loop to perform the same operation on each element of an array. Imagine we owned a store and wanted to increase the price of all our products - this would be time consuming as it would require code for each product. Instead we can use a `for` loop to iterate through the array of products.
+
+To loop through each element of an array, a `for` loop should use the array's `.length` property in it's condition, we have used this property previously.
