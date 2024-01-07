@@ -1119,9 +1119,24 @@ console.log(groceries); // output: ['popcorn', 'bananas', 'coffee beans', 'rice'
 ```JS
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-const outOutOffice = weekDays.slice(1, 4);
+const outOutOffice = weekDays.slice(1, 4); // starts pos 1, ends and includes pos 4
 
-console.log(outOutOffice);
-
+console.log(outOutOffice); // clogs the new sliced array
 // Output: ['Tuesday', 'Wednesday', 'Thursday']
+```
+
+---
+### Arrays and Functions
+
+Throughout the 'Arrays' section of these notes, we discussed how arrays are mutable or changeable. Now we need to understand what happens if we try to change an array within a function. Will the array be changed after the function is called or is it scoped within the function? Let's take a look at an example from Codecademy:
+```JS
+const flowers = ['peony', 'daffodil', 'marigold'];  
+  
+function addFlower(arr) {  
+  arr.push('lily');  
+}  
+  
+addFlower(flowers);  
+  
+console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
 ```
