@@ -1210,7 +1210,13 @@ Let's look at a simple example so we can better understand just how useful loops
 ```JS
 vacationSpots = ['Italy', 'Finland', 'Bali'];
 
-console.log(vacationSpots[0]);
-console.log(vacationSpots[1]);
-console.log(vacationSpots[2]);
+console.log(vacationSpots[0]); // output: Italy
+console.log(vacationSpots[1]); // output: Finland
+console.log(vacationSpots[2]); // output: Bali
 ```
+In the case above, it's quite simple because the array is small but imagine if there were 100 elements - it would be extremely tedious and inefficient, this is where a loop can help us.
+
+---
+### For Loops
+
+
