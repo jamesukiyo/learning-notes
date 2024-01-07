@@ -1306,4 +1306,17 @@ If we tried to access an element after `i = 2` we would receive the output "I wo
 ---
 ### Nested Loops
 
-When a loop runs inside another loop, it is called a nested loop. One use for a nested `for` loop is to compa
+When a loop runs inside another loop, it is called a nested loop. One use for a nested `for` loop is to compare the elements in 2 arrays. For each round of the outer `for` loop, the inner `for` loop will run completely. Let's look at an example from Codecademy:
+```JS
+const myArray = [6, 19, 20];  
+const yourArray = [19, 81, 2];  
+
+for (let i = 0; i < myArray.length; i++) {  
+
+  for (let j = 0; j < yourArray.length; j++) {  
+    if (myArray[i] === yourArray[j]) {  
+      console.log('Both arrays have the number: ' + yourArray[j]);  
+    }  
+  }  
+}
+```
