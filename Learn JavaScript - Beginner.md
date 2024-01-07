@@ -1200,3 +1200,9 @@ console.log(`Array length = ${secretMessage.length}`);
 ---
 ## Loops
 
+A loop is an extremely common and useful programming tool that allows our program to repeat a set of instructions until a condition is met, known as a stopping condition. Please note that the word 'iterate' will be used frequently when discussing loops but, it basically just means "to repeat".
+
+When we need to reuse a task in our code, we often bundle the action into a function. When we can see that a process needs to be run multiple times, we create a loop - they allow us to write efficient code.
+
+For a real world example: If you are hungry, you eat until you reach the stopping condition, which is when you are full and no longer want to eat. 
+
