@@ -1331,8 +1331,11 @@ Let's take a look at each part:
 7. In this example, "Both arrays have the number: 19" will be clogged.
 8. Note that both arrays will run until `i` or `j` is no longer greater than `myArray.length` and `yourArray.length` respectively. The `if` statement doesn't stop the loop because the statement is still true in the loop.
 
-Now let's go through it quickly:
+Now let's go through the whole first cycle of the program for a complete understanding:
 1. `i = 0` which is less than `myArray.length`(3) so the inner `for` loop runs
 2. Now we go through the inner `for` loop:
 	1. `j = 0` which is less than `yourArray.length`(3) - statement is true, loop runs
-	2. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 0`)
+	2. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 0`) is 19
+	3. `if` statement is false -> `j++` so `j = 1` now which is less than `yourArray.length` 
+	4. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 1`) is 81
+	5. `if` statement is false -> `j++` s
