@@ -1283,5 +1283,5 @@ So, first we need an array, in this case we used a `const` variable with the nam
 
 Now let's take a look at how the 2nd part functions. As usual, we start the for loop with `for` and there are the 3 expressions as we discussed previously. However, now it looks a little different:
 
-1. `let i = 0;` - here we are using the letter `i` as our iterator variable name, short for index, instead of `counter` like we had earlier. This functions in exactly the same way, we start the index at position 0 of the array.
-2. `i < vacationSpots.length` -
+1. `let i = 0;` - here we are initializing our iterator variable using the name `i`, short for index, instead of `counter` like we had earlier. This functions in exactly the same way, we start the index at position 0 (the first position) of the array, in this case.
+2. `i < vacationSpots.length` - here is the stopping condition, so the loop will keep iterating as lothe iterator variable `i` is less than the length of the array `vacationSpots` which is 3.
