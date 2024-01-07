@@ -1329,7 +1329,7 @@ Let's take a look at each part:
 5. Then we have an `if` statement that checks if the element at `myArray[i]` is equal to the element at `yourArray[j]`.
 6. Once an equal number is found, a message is clogged to indicate the number that exists in both arrays.
 7. In this example, "Both arrays have the number: 19" will be clogged.
-8. Note that both arrays will run until `i` or `j` is no longer greater than `myArray.length` and `yourArray.length` respectively. The `if` statement doesn't stop the loop because the statement is still true in the loop.
+8. Note that both arrays will run until `i` or `j` is no longer greater than `myArray.length` and `yourArray.length` respectively. The `if` statement doesn't stop the loop because the statement is still true in the loop expressions.
 
 Now let's go through the whole first cycle of the program for a complete understanding:
 1. `i = 0` which is less than `myArray.length`(3) so the inner `for` loop runs
@@ -1346,3 +1346,7 @@ Now let's go through the whole first cycle of the program for a complete underst
 	   
 3. `i++` so `i = 1` which is less than `myArray.length` so the inner for loop runs again for `i = 1`
 	1. `j = 0` which is less than `yourArray.length`(3) - statement is true, loop runs
+	2. element at `myArray[i]` (`i = 1`) is 19 and element at `yourArray[j]` (`j = 0`) is 19
+	3. `if` statement is true -> `console.log('Both arrays have the number: ' + yourArray[j])` `j` in this case is 19 so the output is "Both arrays have the number 19".
+	4. `j++` so `j = 1` now which is less than `yourArray.length`
+	5. 
