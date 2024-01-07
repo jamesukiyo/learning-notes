@@ -1230,11 +1230,34 @@ for (let counter = 5; counter < 9; counter++){
 
   console.log(counter);
 }
-
-
+/* Output:
+5
+6
+7
+8
+*/
 ```
 1. The initialization is `let counter = 5` so the counting will begin at 5;
 2. The stopping condition is `counter < 9` so the counter will run as long as the iterator variable `counter` is less than 9.
 3. The iteration statement is `counter++` which means for each loop, the value of `counter` will increase by 1. First iteration will be 5, second will be 6 etc.
 
-The code block within the `{}` will run until the condition evaluates false, so when `counter < 9`.
+The code block within the `{}` will run until the condition evaluates false, so when `counter >= 9`.
+
+We can do the exact same thing in reverse, like this:
+```JS
+for (let counter = 9; counter >= 5; counter--){
+	console.log(counter);
+}
+/* Output:
+9
+8
+7
+6
+5
+```
+1. The initialization is `let counter = 9` so the counting will begin at 9;
+2. The stopping condition is `counter >= 5` so the counter will run as long as the iterator variable `counter` is greater than or equal to 5.
+3. The iteration statement is `counter--` which means for each loop, the value of `counter` will decrease by 1. First iteration will be 9, second will be 8 etc.
+
+The code block within the `{}` will run until the condition evaluates false, so when `counter  9`.
+
