@@ -1223,11 +1223,18 @@ A typical `for` loop contains an iterator variable which usually appears in all 
 1. The iterator variable is initialized;
 2. It is checked against a stopping condition; 
 3. Then it is assigned a new value on each loop iteration.
+
 Here's an example which I'll explain below:
 ```JS
-for (let counter = 5; counter < 11; counter++){
+for (let counter = 5; counter < 9; counter++){
 
   console.log(counter);
 }
-```
 
+
+```
+1. The initialization is `let counter = 5` so the counting will begin at 5;
+2. The stopping condition is `counter < 9` so the counter will run as long as the iterator variable `counter` is less than 9.
+3. The iteration statement is `counter++` which means for each loop, the value of `counter` will increase by 1. First iteration will be 5, second will be 6 etc.
+
+The code block within the `{}` will run until the condition evaluates false, so when `counter < 9`.
