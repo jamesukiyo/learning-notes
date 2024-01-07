@@ -1279,4 +1279,9 @@ I would love to visit Bali
 I would love to visit Paris
 I would love to visit Rome */
 ```
-So, first we need an array, in this case we used a `cons`
+So, first we need an array, in this case we used a `const` variable with the name `vacationSpots` which contains the elements `Bali`, `Paris` and `Rovaniemi` to form an array.
+
+Now let's take a look at how the 2nd part functions. As usual, we start the for loop with `for` and there are the 3 expressions as we discussed previously. However, now it looks a little different:
+
+1. `let i = 0;` - here we are using the letter `i` as our iterator variable name, short for index, instead of `counter` like we had earlier. This functions in exactly the same way, we start the index at position 0 of the array.
+2. `i < vacationSpots.length` -
