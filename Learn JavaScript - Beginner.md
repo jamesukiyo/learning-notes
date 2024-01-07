@@ -1219,4 +1219,4 @@ In the case above, it's quite simple because the array is small but imagine if t
 ---
 ### For Loops
 
-
+A typical `for` loop contains an iterator variable which usually appears in all 3 expressions in the loop. The 
