@@ -1296,10 +1296,14 @@ Finally, we clog the phrase "I would love to visit `${vacationSpots[i]}`". This 
 5. The steps above repeat until `i` is no longer less than the `vacationSpots.length` which is 3. In this case, the stopping condition is met and the clog will not occur.
 
 So, we have:
+1. `i = 0` which clogs "I would love to visit Bali" (Bali is position 0 in the array)
+2. `i = 1` which clogs "I would love to visit Paris" (Paris is position 1 in the array)
+3. `i = 2` which clogs "I would love to visit Rovaniemi" (Rovaniemi is position 2 in the array)
+4. `i = 3` causes us to reach the stopping condition because 3 is not less than `vacationSpots.length`(3) so the loop stops.
 
-1. `i = 0` which clogs "I would love to visit Bali"
-2. `i = 1` which clogs "I would love to visit Paris"
-3. `i = 2` which clogs "I would love to visit Rovaniemi"
-4. `i = 3` causes us to reach the stopping cond
+If we tried to access an element after `i = 2` we would receive the output "I would love to visit undefined" which is why we use the `.length` of an array because it is universally applicable and we don't need to count the number of elements.
 
+---
+### Nested Loops
 
+When a loop runs inside another loop, it is called a nested loop. One use for a nested `for` loop is to compa
