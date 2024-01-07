@@ -1219,4 +1219,7 @@ In the case above, it's quite simple because the array is small but imagine if t
 ---
 ### For Loops
 
-A typical `for` loop contains an iterator variable which usually appears in all 3 expressions in the loop. The 
+A typical `for` loop contains an iterator variable which usually appears in all 3 expressions in the loop. Typically, this is how a `for` loop works: 
+1. The iterator variable is initialized;
+2. It is checked against a stopping condition; 
+3. Then it is assigned a new value on each loop iteration.
