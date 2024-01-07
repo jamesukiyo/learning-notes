@@ -1206,3 +1206,11 @@ When we need to reuse a task in our code, we often bundle the action into a func
 
 For a real world example: If you are hungry, you eat until you reach the stopping condition, which is when you are full and no longer want to eat. 
 
+Let's look at a simple example so we can better understand just how useful loops are:
+```JS
+vacationSpots = ['Italy', 'Finland', 'Bali'];
+
+console.log(vacationSpots[0]);
+console.log(vacationSpots[1]);
+console.log(vacationSpots[2]);
+```
