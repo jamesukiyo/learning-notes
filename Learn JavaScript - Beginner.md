@@ -1142,4 +1142,23 @@ addFlower(flowers);  // here we call the function with the argument of the 'flow
   
 console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily'] 
 ```
-Above, we can see that the array was mutated within a function but, the array remains mutated outside the function as well. This concept can be called a "pass-by reference" since what we
+Above, we can see that the array was mutated within a function but, the array remains mutated outside the function as well. This concept can be called a "pass-by reference" since what we're actually doing is passing the function a reference to where the variable memory is stored and changing the memory contents.
+
+--- 
+
+### Nested Arrays
+
+Arrays can store other arrays. This is known as a nested array and can look something like this:
+```JS
+const nestedEx = [[1],[2, 3]];
+
+console.log(nestedEx[1]); // Output [2, 3]
+```
+`[2, 3]` is stored at index position 1 in the array. If we want to access elements in a nested array, we can chain together more bracket notations with index values:
+```JS
+const nestedEx = [[1], [2, 3]];  
+  
+console.log(nestedEx[1]); // Output: [2, 3]  
+console.log(nestedEx[1][0]); // Output: 2
+```
+On line 4, you can see we first index on the 'outer' array, position 1
