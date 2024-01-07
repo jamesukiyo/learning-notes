@@ -1355,4 +1355,6 @@ Now let's go through the whole first cycle of the program for a complete underst
 	   
 3. `i++` so `i = 2` which is less than `myArray.length` so the inner loop runs again for `i = 2`
    
-4. `i++` so `i = 3` which is no longer less than `myArray.length` -> 
+4. `i++` so `i = 3` which is no longer less than `myArray.length` so the stopping condition is met and neither loop will run because there are no more comparisons to be made (`i = 3` in this case is `undefined` as we mentioned before).
+
+The wall of text above is tedious to read through but, it shows a readable example of how the program iterates through the inner loop as long as the outer loop is true, in detail.
