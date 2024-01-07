@@ -1115,4 +1115,13 @@ groceries.unshift('popcorn'); // In this case 'popcorn' is added to the beginnin
 console.log(groceries); // output: ['popcorn', 'bananas', 'coffee beans', 'rice', 'pasta', 'olive oil', 'salmon']
 ```
 
-`.slice()` is used to create a shallow copy of part or all of an array without modifying the original array. A shallow copy duplicates the contents of an object into a new instance by reference which is why changes to the copy are not reflected in the original.
+`.slice()` is used to create a shallow copy of part or all of an array without modifying the original array. A shallow copy duplicates the contents of an object into a new instance by reference which is why changes to the copy are not reflected in the original. It can take two arguments, the first states the first element to return, the second states up to and including which element to return. For example, `.slice(0, 4)` would return every element from position 0 up to and including 4. If a 2nd argument isn't provided, the start element and all following elements will be returned. Here's an actual example:
+```JS
+const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+const outOutOffice = weekDays.slice(1, 4);
+
+console.log(outOutOffice);
+
+// Output: ['Tuesday', 'Wednesday', 'Thursday']
+```
