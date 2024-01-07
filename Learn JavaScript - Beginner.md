@@ -1338,4 +1338,9 @@ Now let's go through the whole first cycle of the program for a complete underst
 	2. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 0`) is 19
 	3. `if` statement is false -> `j++` so `j = 1` now which is less than `yourArray.length` 
 	4. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 1`) is 81
-	5. `if` statement is false -> `j++` s
+	5. `if` statement is false -> `j++` so `j = 2` now which is less than `yourArray.length`
+	6. element at `myArray[i]` (`i = 0`) is 6 and element at `yourArray[j]` (`j = 2`) is 2
+	7. `if` statement is false -> `j++` so `j = 3` which is no longer less than `yourArray.length`
+	8. the inner loop is now complete for the outer loop `i = 0`.
+3. `i++` so `i = 1` which is less than `myArray.length` so the inner for loop runs again for `i = 1`
+	1. `j = 0` which is less than `yourArray.length`(3) - statement is true, loop runs
